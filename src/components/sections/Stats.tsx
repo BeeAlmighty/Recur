@@ -2,8 +2,18 @@ import { motion } from 'framer-motion';
 import { GlassCard } from '../ui/GlassCard';
 import { AnimatedCounter } from '../ui/AnimatedCounter';
 
+// 1. Define the shape of a Stat object clearly
+interface StatItem {
+  value: number;
+  label: string;
+  desc: string;
+  suffix: string;
+  prefix?: string; // The '?' makes it optional, so it won't error if missing
+}
+
 export default function Stats() {
-  const stats = [
+  // 2. Apply the type to the array
+  const stats: StatItem[] = [
     { 
       value: 98, 
       suffix: '%', 
@@ -30,14 +40,18 @@ export default function Stats() {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as const }}
       >
         <GlassCard className="p-8 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 divide-y md:divide-y-0 md:divide-x divide-white/10">
             {stats.map((stat, idx) => (
               <div key={idx} className="flex flex-col items-center text-center pt-8 md:pt-0 first:pt-0 px-4">
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  <AnimatedCounter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
+                  <AnimatedCounter 
+                    value={stat.value} 
+                    prefix={stat.prefix || ''} // Use empty string if prefix is undefined
+                    suffix={stat.suffix} 
+                  />
                 </div>
                 <div className="text-lg font-medium text-[var(--color-gold)] mb-1">
                   {stat.label}
