@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const activeSection = useActiveSection(['how-it-works', 'features', 'pricing', 'faq']);
-
+  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 60);
@@ -70,12 +70,19 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         
         {/* Premium Logo with Gradient */}
-        <div 
-          className="text-2xl md:text-3xl font-display font-extrabold tracking-tight text-white cursor-pointer relative z-50 transition-transform duration-300 hover:scale-105" 
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        >
-          RE<span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-gold-light)] to-[var(--color-gold-dark)]">CUR</span>
-        </div>
+<div 
+  className="flex items-center gap-3 cursor-pointer group" 
+  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+>
+  <img 
+    src="/logo.svg" 
+    alt="RECUR Logo" 
+    className="w-10 h-10 md:w-12 md:h-12 transition-transform duration-300 group-hover:scale-110" 
+  />
+  {/* <div className="text-2xl font-display font-extrabold tracking-tight text-white">
+    RE<span className="text-[var(--color-gold)]">CUR</span>
+  </div> */}
+</div>
 
         {/* Desktop Nav - Animated Underlines */}
         <div className="hidden md:flex items-center gap-10">

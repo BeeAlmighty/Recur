@@ -1,7 +1,7 @@
 export const faqsData = [
   {
     question: "Do I need any technical skills to run this?",
-    answer: "Zero. We handle 100% of the technical setup, n8n workflows, Airtable database configuration, and message formatting. Your only job is to put the QR code on your tables."
+    answer: "Zero. We handle 100% of the technical setup, workflows, database configuration, and message formatting. Your only job is to put the QR code on your tables."
   },
   {
     question: "How long does it take to go live?",
@@ -13,6 +13,6 @@ export const faqsData = [
   },
   {
     question: "Are SMS and Email costs included?",
-    answer: "On the Starter and Growth plans, BulkSMSNigeria units and Resend email volumes are billed completely at cost with zero markup. The Elite plan includes a pre-allocated monthly credit buffer."
+    answer: "On the Starter and Growth plans, SMS units and email volumes are billed completely at cost with zero markup. The Elite plan includes a pre-allocated monthly credit buffer."
   }
 ];

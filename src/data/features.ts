@@ -13,7 +13,7 @@ export const featuresData = [
   {
     icon: Database,
     title: "Automated CRM Build",
-    desc: "Zero manual entry. n8n webhooks instantly route, deduplicate, and organize diner data into a pristine Airtable database."
+    desc: "Zero manual entry. system instantly route, merges data, and organize diner data into a pristine database."
   },
   {
     icon: PartyPopper,
@@ -22,8 +22,8 @@ export const featuresData = [
   },
   {
     icon: RefreshCcw,
-    title: "60-Day Win-Back Campaigns",
-    desc: "Identify customers who haven't visited in two months and automatically trigger a special offer to bring them back through the doors."
+    title: "30-Day Win-Back Campaigns",
+    desc: "Identify customers who haven't visited in 30 days and automatically trigger a special offer to bring them back through the doors."
   },
   {
     icon: Star,
@@ -33,6 +33,6 @@ export const featuresData = [
   {
     icon: Smartphone,
     title: "WhatsApp & SMS Native",
-    desc: "Bypass crowded email inboxes. Deliver your campaigns directly via WhatsApp and BulkSMSNigeria for a 98% open rate."
+    desc: "Bypass crowded email inboxes. Deliver your campaigns directly via WhatsApp and SMS for a 98% open rate."
   }
 ];

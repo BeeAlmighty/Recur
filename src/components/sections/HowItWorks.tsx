@@ -10,17 +10,17 @@ export default function HowItWorks() {
     {
       number: "02",
       title: "Spend Tracking",
-      desc: "Every time they visit, their bill is securely logged, automatically updating their lifetime spend profile in Airtable."
+      desc: "Every time they visit, their bill is securely logged, automatically updating their lifetime spend profile in the Database."
     },
     {
       number: "03",
       title: "Tier Unlocks",
-      desc: "As they spend more, n8n automatically upgrades them to new Loyalty Tiers (e.g., Gold Status), triggering exclusive WhatsApp rewards."
+      desc: "As they spend more, the system automatically upgrades them to new Loyalty Tiers (e.g., Gold Status), triggering exclusive WhatsApp rewards."
     },
     {
       number: "04",
       title: "Automated Growth",
-      desc: "Alongside loyalty, the system runs autopilot birthday campaigns, 60-day win-backs, and Google Review requests."
+      desc: "Alongside loyalty, the system runs autopilot birthday campaigns, 30-day win-backs, and Google Review requests."
     }
   ];
 

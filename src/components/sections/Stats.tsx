@@ -35,7 +35,7 @@ export default function Stats() {
   ];
 
   return (
-    <section className="relative z-10 max-w-7xl mx-auto px-6 -mt-12 md:-mt-24 mb-24">
+    <section className="relative z-20 max-w-7xl mx-auto px-6 -mt-20 md:-mt-32 mb-24">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

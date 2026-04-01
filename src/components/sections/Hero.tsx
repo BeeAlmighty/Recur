@@ -6,7 +6,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-32 md:pb-48 overflow-hidden">
       {/* Background Animated Orbs */}
       <div className="absolute top-1/4 left-1/4 w-[40vw] h-[40vw] rounded-full bg-[var(--color-gold)]/20 blur-[120px] animate-pulse pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[35vw] h-[35vw] rounded-full bg-[var(--color-gold-dark)]/20 blur-[100px] animate-pulse pointer-events-none delay-1000" />
