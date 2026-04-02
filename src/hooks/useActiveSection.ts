@@ -15,7 +15,7 @@ export function useActiveSection(sectionIds: string[]) {
     const observer = new IntersectionObserver(callback, {
       root: null,
       // Triggers when the section hits the absolute vertical center of the viewport
-      rootMargin: '-50% 0px -50% 0px', 
+      rootMargin: '-50% 0px -50% 0px',
       threshold: 0,
     });
 

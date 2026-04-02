@@ -16,7 +16,7 @@ export default function App() {
   return (
     <div className="relative min-h-screen flex flex-col bg-[#0D0D0D] text-[#F5F0E8] overflow-x-hidden selection:bg-gold/30 selection:text-white">
       <Navbar />
-      
+
       {/* The flex-grow utility ensures the main content pushes the footer 
         to the bottom of the screen on very short pages (though a landing 
         page this long won't have that issue, it's a good layout habit). 

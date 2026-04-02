@@ -18,7 +18,6 @@ export default function Testimonials() {
   return (
     <section className="py-24 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-6">
-        
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-display font-bold">
             Trusted by <span className="text-[var(--color-gold)] italic">Top Restaurants</span>
@@ -27,7 +26,7 @@ export default function Testimonials() {
 
         <GlassCard className="relative p-8 md:p-16 min-h-[350px] flex flex-col justify-center">
           <Quote className="absolute top-8 left-8 w-16 h-16 text-[var(--color-gold)]/10 -rotate-12" />
-          
+
           <div className="relative z-10">
             <AnimatePresence mode="wait">
               <motion.div
@@ -41,14 +40,18 @@ export default function Testimonials() {
                 <p className="text-xl md:text-3xl font-display italic text-white leading-relaxed mb-10">
                   "{testimonialsData[currentIndex].quote}"
                 </p>
-                
+
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-[var(--color-surface-2)] border border-[var(--color-gold)]/30 flex items-center justify-center text-[var(--color-gold)] font-bold text-lg shadow-[0_0_15px_rgba(201,168,76,0.2)]">
                     {testimonialsData[currentIndex].initials}
                   </div>
                   <div className="text-left">
-                    <div className="font-bold text-white">{testimonialsData[currentIndex].author}</div>
-                    <div className="text-sm text-[#A09880]">{testimonialsData[currentIndex].role}</div>
+                    <div className="font-bold text-white">
+                      {testimonialsData[currentIndex].author}
+                    </div>
+                    <div className="text-sm text-[#A09880]">
+                      {testimonialsData[currentIndex].role}
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -62,14 +65,15 @@ export default function Testimonials() {
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  idx === currentIndex ? 'bg-[var(--color-gold)] w-6' : 'bg-white/20 hover:bg-white/40'
+                  idx === currentIndex
+                    ? 'bg-[var(--color-gold)] w-6'
+                    : 'bg-white/20 hover:bg-white/40'
                 }`}
                 aria-label={`Go to testimonial ${idx + 1}`}
               />
             ))}
           </div>
         </GlassCard>
-
       </div>
     </section>
   );

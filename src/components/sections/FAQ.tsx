@@ -12,9 +12,7 @@ export default function FAQ() {
     <section id="faq" className="py-24">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-            Common Questions
-          </h2>
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Common Questions</h2>
           <p className="text-[#A09880]">Everything you need to know about the system and setup.</p>
         </div>
 
@@ -22,20 +20,27 @@ export default function FAQ() {
           {faqsData.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
-              <GlassCard key={idx} className="overflow-hidden transition-colors hover:border-white/20">
+              <GlassCard
+                key={idx}
+                className="overflow-hidden transition-colors hover:border-white/20"
+              >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
                   className="w-full flex items-center justify-between p-6 text-left"
                 >
                   <span className="text-lg font-medium text-white pr-8">{faq.question}</span>
-                  <div className={cn(
-                    "w-8 h-8 rounded-full flex items-center justify-center border transition-all duration-300 shrink-0",
-                    isOpen ? "bg-[var(--color-gold)] border-[var(--color-gold)] text-black rotate-45" : "border-white/20 text-[#A09880]"
-                  )}>
+                  <div
+                    className={cn(
+                      'w-8 h-8 rounded-full flex items-center justify-center border transition-all duration-300 shrink-0',
+                      isOpen
+                        ? 'bg-[var(--color-gold)] border-[var(--color-gold)] text-black rotate-45'
+                        : 'border-white/20 text-[#A09880]',
+                    )}
+                  >
                     <Plus size={18} />
                   </div>
                 </button>
-                
+
                 <AnimatePresence>
                   {isOpen && (
                     <motion.div

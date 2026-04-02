@@ -7,24 +7,23 @@ export default function Features() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.1 }
-    }
+      transition: { staggerChildren: 0.1 },
+    },
   };
 
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } as const }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } as const },
   };
 
   return (
     <section id="features" className="py-24 relative overflow-hidden">
-      
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full bg-[var(--color-gold)]/5 blur-[120px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="mb-16 md:mb-24">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -35,11 +34,11 @@ export default function Features() {
           </motion.h2>
         </div>
 
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {featuresData.map((feature, idx) => {
@@ -53,9 +52,7 @@ export default function Features() {
                   <h3 className="text-xl font-bold text-white mb-3 font-display">
                     {feature.title}
                   </h3>
-                  <p className="text-[#A09880] leading-relaxed text-sm">
-                    {feature.desc}
-                  </p>
+                  <p className="text-[#A09880] leading-relaxed text-sm">{feature.desc}</p>
                 </GlassCard>
               </motion.div>
             );

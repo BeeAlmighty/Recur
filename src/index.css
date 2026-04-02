@@ -1,17 +1,17 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* Brand Colors */
-  --color-gold: #C9A84C;
-  --color-gold-light: #E8C96A;
-  --color-gold-dark: #8B6914;
-  
+  --color-gold: #c9a84c;
+  --color-gold-light: #e8c96a;
+  --color-gold-dark: #8b6914;
+
   --color-surface-1: #181818;
   --color-surface-2: #222222;
 
   /* Custom Fonts - Updated for Professional SaaS Look */
-  --font-display: "Plus Jakarta Sans", sans-serif;
-  --font-sans: "Inter", sans-serif;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-sans: 'Inter', sans-serif;
 }
 
 /* Custom utility for your GlassCards */
@@ -21,9 +21,9 @@
 }
 
 body {
-  background-color: #0D0D0D;
-  color: #F5F0E8;
+  background-color: #0d0d0d;
+  color: #f5f0e8;
   -webkit-font-smoothing: antialiased;
   /* This ensures the whole app defaults to Inter */
-  font-family: var(--font-sans); 
+  font-family: var(--font-sans);
 }

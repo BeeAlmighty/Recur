@@ -8,10 +8,10 @@ interface SectionTagProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export function SectionTag({ children, className, showPulse = true, ...props }: SectionTagProps) {
   return (
-    <div 
+    <div
       className={cn(
-        "inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--color-gold)]/30 bg-[var(--color-gold)]/10 text-[var(--color-gold)] text-sm font-medium",
-        className
+        'inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--color-gold)]/30 bg-[var(--color-gold)]/10 text-[var(--color-gold)] text-sm font-medium',
+        className,
       )}
       {...props}
     >
