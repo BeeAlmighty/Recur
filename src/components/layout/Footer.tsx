@@ -18,7 +18,7 @@ export default function Footer() {
               RE<span className="text-[var(--color-gold)]">CUR</span>
             </div>
             <p className="text-sm text-[#A09880] max-w-xs">
-              The automated retention engine for Nigerian restaurants. Build your database, increase
+              The automated retention engine for restaurants. Build your database, increase
               repeat visits, and dominate local SEO.
             </p>
           </div>

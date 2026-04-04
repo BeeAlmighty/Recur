@@ -11,6 +11,7 @@ import Pricing from './components/sections/Pricing';
 // import Testimonials from './components/sections/Testimonials';
 import FAQ from './components/sections/FAQ';
 import FinalCTA from './components/sections/FinalCTA';
+import RiskMitigation from './components/sections/RiskMitigation';
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         <HowItWorks />
         <Features />
         <Pricing />
+        <RiskMitigation />
         {/* <Testimonials /> */}
         <FAQ />
         <FinalCTA />

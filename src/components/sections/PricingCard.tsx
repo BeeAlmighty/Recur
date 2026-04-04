@@ -15,18 +15,15 @@ interface PricingCardProps {
 
 export function PricingCard({ tier, index }: PricingCardProps) {
   const [activeCycle, setActiveCycle] = useState(pricingData.cycles[0]);
+
   const handleGetStarted = () => {
     const phoneNumber = '2348103157367';
-
-    // Construct the dynamic message
     const message = `Hello Moses! I'm interested in the *${tier.name}* plan with *${activeCycle.label}* billing for my restaurant. Can we discuss the 5-day setup?`;
-
-    // Encode the message for a URL
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
     window.open(whatsappUrl, '_blank');
   };
+
   const monthlyPrice = tier.basePrice * (1 - activeCycle.discount);
 
   return (
@@ -35,22 +32,39 @@ export function PricingCard({ tier, index }: PricingCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
-      className={cn('relative h-full', tier.isPopular && 'lg:-mt-6')}
+      // We removed 'pt-8' and replaced it with margin-top for mobile spacing
+      // The relative class here is the anchor for the absolute badge
+      className={cn('relative h-full mt-6 lg:mt-0', tier.isPopular && 'lg:-mt-6')}
     >
+      {/* THE BADGE FIX: 
+        top-0 aligns it to the top edge. 
+        -translate-y-1/2 moves it exactly 50% up so it straddles the border! 
+      */}
+      {tier.isPopular && (
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-max">
+          <div className="relative group">
+            {/* The Glow Effect layer */}
+            <div className="absolute inset-0 bg-[var(--color-gold)] blur-md opacity-60 rounded-full transition-opacity duration-300 group-hover:opacity-100"></div>
+
+            {/* The Actual Badge */}
+            <Badge
+              variant="gold"
+              className="relative shadow-2xl px-4 py-1.5 border border-[#E8C96A]/50 tracking-wider font-bold"
+            >
+              RECOMMENDED
+            </Badge>
+          </div>
+        </div>
+      )}
+
       <GlassCard
         variant={tier.isPopular ? 'featured' : 'default'}
         className="flex flex-col h-full p-6 md:p-8 relative"
       >
-        {tier.isPopular && (
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 w-max">
-            <Badge variant="gold">Most Popular</Badge>
-          </div>
-        )}
-
         <h3 className="text-2xl font-display font-bold text-white mb-2">{tier.name}</h3>
         <p className="text-sm text-[#A09880] mb-6 min-h-[40px]">{tier.desc}</p>
 
-        {/* Local Toggle for this specific card */}
+        {/* Local Toggle */}
         <div className="grid grid-cols-4 gap-1 p-1 bg-white/5 border border-white/10 rounded-xl mb-8">
           {pricingData.cycles.map((cycle) => {
             const isActive = activeCycle.id === cycle.id;
@@ -65,7 +79,7 @@ export function PricingCard({ tier, index }: PricingCardProps) {
               >
                 {isActive && (
                   <motion.div
-                    layoutId={`active-pill-${tier.id}`} // Unique ID per card
+                    layoutId={`active-pill-${tier.id}`}
                     className="absolute inset-0 bg-[var(--color-gold)] rounded-lg"
                     transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                   />
@@ -110,7 +124,7 @@ export function PricingCard({ tier, index }: PricingCardProps) {
         <GoldButton
           onClick={handleGetStarted}
           variant={tier.isPopular ? 'primary' : 'outline'}
-          className="w-full"
+          className="w-full mt-auto"
         >
           Get Started
         </GoldButton>
