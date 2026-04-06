@@ -11,7 +11,7 @@ export const pricingData = {
       id: 'starter',
       name: 'Starter',
       desc: 'Essential automated retention to turn walk-ins into predictable regulars.',
-      basePrice: 100000,
+      basePrice: 80000,
       features: [
         'Automated Database Building',
         'Multi-channel SMS & Email Outreach',
@@ -26,7 +26,7 @@ export const pricingData = {
       id: 'growth',
       name: 'Growth',
       desc: 'The ultimate VIP engine with spend tracking, custom strategy, and WhatsApp integration.',
-      basePrice: 150000,
+      basePrice: 120000,
       features: [
         'Everything in Starter',
         'Customer Spend Tracking (ROI focus)',
