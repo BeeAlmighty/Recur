@@ -15,7 +15,7 @@ export default function HowItWorks() {
     {
       number: '03',
       title: 'Tier Unlocks',
-      desc: 'As they spend more, the system automatically upgrades them to new Loyalty Tiers (e.g., Gold Status), triggering exclusive WhatsApp rewards.',
+      desc: 'As they spend more, the system automatically upgrades them to new Loyalty Tiers (e.g., Gold Status), triggering exclusive rewards.',
     },
     {
       number: '04',

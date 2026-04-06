@@ -45,7 +45,7 @@ export default function RiskMitigation() {
                 <h4 className="text-white font-bold">The RECUR Performance SLA</h4>
               </div>
               <p className="text-sm text-[#A09880] leading-relaxed">
-                Before deployment, we sign a private **Service Level Agreement** defining the
+                Before deployment, we sign a private <b>Service Level Agreement</b> defining the
                 specific growth targets for your floor. If those targets aren't met, 50% of your
                 setup fee is returned.
               </p>

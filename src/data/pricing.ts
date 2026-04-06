@@ -32,7 +32,6 @@ export const pricingData = {
         'Customer Spend Tracking (ROI focus)',
         'Native WhatsApp Promotions',
         'Custom Campaign Copywriting',
-        'Weekly Strategy Calls',
         'Multi-Location Dashboard Support',
         'Quarterly Deep-Dive Reporting',
         'Priority WhatsApp Support',
