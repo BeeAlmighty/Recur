@@ -7,7 +7,7 @@ export const faqsData = [
   {
     question: 'How long does it take to go live?',
     answer:
-      'Your custom retention engine will be fully operational within 5 business days from the payment of your setup fee.',
+      'Your custom retention engine will be fully operational within 2 business days from the payment of your setup fee.',
   },
   {
     question: "What happens if a customer doesn't have a smartphone?",
