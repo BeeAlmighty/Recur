@@ -1,4 +1,4 @@
-import { ShieldCheck, Server, RefreshCcw, Zap } from 'lucide-react';
+import { Server, RefreshCcw, Zap } from 'lucide-react';
 import { GlassCard } from '../ui/GlassCard';
 import { SectionTag } from '../ui/SectionTag';
 
