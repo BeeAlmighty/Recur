@@ -16,7 +16,7 @@ export default function Pricing() {
             <span className="text-[var(--color-gold)] italic">Infinite ROI.</span>
           </h2>
           <p className="text-[#A09880] max-w-xl mx-auto">
-            All plans include a one-time ₦150,000 setup fee. Choose the billing cycle that fits your
+            All plans include a one-time ₦85,000 setup fee. Choose the billing cycle that fits your
             cash flow.
           </p>
         </div>

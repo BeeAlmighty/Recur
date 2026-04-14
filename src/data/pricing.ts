@@ -1,5 +1,5 @@
 export const pricingData = {
-  setupFee: 150000,
+  setupFee: 85000,
   cycles: [
     { id: 'monthly', label: 'Monthly', discount: 0 },
     { id: 'quarterly', label: 'Quarterly', discount: 0.1, badge: 'Save 10%' },
@@ -11,7 +11,7 @@ export const pricingData = {
       id: 'starter',
       name: 'Starter',
       desc: 'Essential automated retention to turn walk-ins into predictable regulars.',
-      basePrice: 85000,
+      basePrice: 45000,
       features: [
         'Automated Database Building',
         'Multi-channel SMS & Email Outreach',
@@ -26,7 +26,7 @@ export const pricingData = {
       id: 'growth',
       name: 'Growth',
       desc: 'The ultimate VIP engine with spend tracking, custom strategy, and WhatsApp integration.',
-      basePrice: 95000,
+      basePrice: 65000,
       features: [
         'Everything in Starter',
         'Customer Spend Tracking (ROI focus)',
