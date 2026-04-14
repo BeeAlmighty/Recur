@@ -29,7 +29,7 @@ export default function FinalCTA() {
                 document.querySelector('#pricing')?.scrollIntoView({ behavior: 'smooth' })
               }
             >
-              Start Your 7-Day Build
+              Get Started
             </GoldButton>
             <GoldButton
               variant="outline"
