@@ -21,7 +21,7 @@ export default function Stats() {
       desc: 'Via WhatsApp & SMS (compared to just 20% for standard email)',
     },
     {
-      value: 2,
+      value: 5,
       suffix: ' Days',
       label: 'Guaranteed Setup',
       desc: 'Maximum time from your initial payment to a fully operational system',
